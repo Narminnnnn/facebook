@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/styleregister.css">
+</head>
+<body>
+    
+<section>
+
+    <div class="all">
+        <div class="image"> 
+            <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="">
+        </div>
+        <div class="form-container">
+            <div class="text">
+                <h1>Yeni Bir Hesab Yarat</h1>
+                <p>Sürətli və asandır.</p>
+            </div>
+            
+            <form>
+                <!-- Ad ve Soyad -->
+                <div class="name-group">
+                    <input type="text" placeholder="Adın" class="half-input" required>
+                    <input type="text" placeholder="Soyadın" class="half-input" required>
+                </div>
+                
+                <!-- Doğum Tarixi -->
+                <div class="date-group">
+                    <label for="date">Doğum Tarixi</label>
+                    <div class="date-select">
+                        <select required>
+                            <option value="">Gün</option>
+                            <script>
+                                for (let i = 1; i <= 31; i++) {
+                                    document.write(`<option value="${i}">${i}</option>`);
+                                }
+                            </script>
+                        </select>
+                        <select required>
+                            <option value="">Ay</option>
+                            <option value="1">Yanvar</option>
+                            <option value="2">Fevral</option>
+                            <option value="3">Mart</option>
+                            <option value="4">Aprel</option>
+                            <option value="5">May</option>
+                            <option value="6">İyun</option>
+                            <option value="7">İyul</option>
+                            <option value="8">Avqust</option>
+                            <option value="9">Sentyabr</option>
+                            <option value="10">Oktyabr</option>
+                            <option value="11">Noyabr</option>
+                            <option value="12">Dekabr</option>
+                        </select>
+                        <select required>
+                            <option value="">İl</option>
+                            <script>
+                                const currentYear = new Date().getFullYear();
+                                for (let i = currentYear; i >= 1900; i--) {
+                                    document.write(`<option value="${i}">${i}</option>`);
+                                }
+                            </script>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Cinsiyet -->
+                <div class="gender-group">
+                    <label>Cinsiyyət</label>
+                    <div class="gender-options">
+                        <div class="border">
+                            <label for="female">Qadın</label>
+                            <input type="radio" id="female" name="gender" value="Qadın" required>
+                        </div>
+                        <div class="border">
+                            <label for="male">Kişi</label>
+                            <input type="radio" id="male" name="gender" value="Kişi">
+                        </div>
+                        <div class="border">
+                            <label for="custom">Digər</label>
+                            <input type="radio" id="custom" name="gender" value="Digər">
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Telefon veya Email -->
+                <input type="email" placeholder="Mobil telefon nömrəsi və ya e-poçt" required>
+                
+                <!-- Şifre -->
+                <input type="password" placeholder="Yeni Şifrə" required>
+                
+                <!-- Alt Bilgilendirme -->
+                <p class="info-text">Xidmətimizdən istifadə edən insanlar əlaqə məlumatlarınızı Facebook-a yükləmiş ola bilər. Ətraflı məlumat əldə edin.</p>
+                <p class="terms">Qeyd ol düyməsinə basaraq, <a href="#">Qaydalarımızı</a>, <a href="#">Gizlilik sözləşməsini</a> və <a href="#">Kukilər Sözləşməsini</a> qəbul etmiş olursan. İstənilən vaxt bizdən SMS bildirişləri ala və bu bildirişləri dayandıra bilərsiniz.</p>
+                
+                <!-- Kaydol Butonu -->
+                <button type="submit" class="register-btn">Qeyd ol</button>
+            </form>
+    
+            <p class="login-link"><a href=".././../index.html">Hesabın artıq var?</a></p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="/main.js"></script>
+</body>
+</html>

@@ -1,126 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    
-<section>
-
-    <div class="all">
-        <div class="image"> 
-            <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="">
-        </div>
-        <div class="form-container">
-            <div class="text">
-                <h1>Yeni Bir Hesap Oluştur</h1>
-                <p>Hızlı ve kolaydır.</p>
-            </div>
-            
-            <form>
-                <!-- Ad ve Soyad -->
-                <div class="name-group">
-                    <input type="text" placeholder="Adın" class="half-input" required>
-                    <input type="text" placeholder="Soyadın" class="half-input" required>
-                </div>
-                
-                <!-- Doğum Tarihi -->
-                <div class="date-group">
-                    <label for="date">Doğum Tarihi</label>
-                    <div class="date-select">
-                        <select required>
-                            <option value="">Gün</option>
-                            <script>
-                                for (let i = 1; i <= 31; i++) {
-                                    document.write(`<option value="${i}">${i}</option>`);
-                                }
-                            </script>
-                        </select>
-                        <select required>
-                            <option value="">Ay</option>
-                            <option value="1">Ocak</option>
-                            <option value="2">Şubat</option>
-                            <option value="3">Mart</option>
-                            <option value="4">Nisan</option>
-                            <option value="5">Mayıs</option>
-                            <option value="6">Haziran</option>
-                            <option value="7">Temmuz</option>
-                            <option value="8">Ağustos</option>
-                            <option value="9">Eylül</option>
-                            <option value="10">Ekim</option>
-                            <option value="11">Kasım</option>
-                            <option value="12">Aralık</option>
-                        </select>
-                        <select required>
-                            <option value="">Yıl</option>
-                            <script>
-                                const currentYear = new Date().getFullYear();
-                                for (let i = currentYear; i >= 1900; i--) {
-                                    document.write(`<option value="${i}">${i}</option>`);
-                                }
-                            </script>
-                        </select>
-                    </div>
-                </div>
-                
-                <!-- Cinsiyet -->
-                <div class="gender-group">
-                    <label>Cinsiyet</label>
-                    <div class="gender-options">
-                        <div class="border">
-                            <label for="female">Kadın</label>
-                            <input type="radio" id="female" name="gender" value="Kadın" required>
-                        </div>
-                        <div class="border">
-                            <label for="male">Erkek</label>
-                            <input type="radio" id="male" name="gender" value="Erkek">
-                        </div>
-                        <div class="border">
-                            <label for="custom">Özel</label>
-                            <input type="radio" id="custom" name="gender" value="Özel">
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Telefon veya Email -->
-                <input type="email" placeholder="Cep telefonu numarası veya e-posta" required>
-                
-                <!-- Şifre -->
-                <input type="password" placeholder="Yeni şifre" required>
-                
-                <!-- Alt Bilgilendirme -->
-                <p class="info-text">Hizmetimizi kullanan kişiler senin iletişim bilgilerini Facebook’a yüklemiş olabilir. Daha fazla bilgi al.</p>
-                <p class="terms">Kaydol düğmesine tıklayarak, <a href="#">Koşullarımızı</a>, <a href="#">Gizlilik İlkemizi</a> ve <a href="#">Çerezler İlkemizi</a> kabul etmiş olursun. Bizden SMS Bildirimleri alabilir ve bu bildirimleri istediğin zaman durdurabilirsin.</p>
-                
-                <!-- Kaydol Butonu -->
-                <button type="submit" class="register-btn">Kaydol</button>
-            </form>
-    
-            <p class="login-link">Hesabın zaten var mı?</p>
-        </div>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook Daxil Ol</title>
+    <link rel="stylesheet" href="./assets/css/styleenterr.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h1 class="facebook-logo">facebook</h1>
+      <div class="login-box">
+        <h2>Facebooka daxil ol</h2>
+        <form id="form">
+          <input id="email"
+            type="email"
+            placeholder="E-poçt və ya telefon nömrəsi"
+            required
+          />
+          <input id="password" type="password" placeholder="Şifrə" required />
+          <button type="submit" class="login-btn">Daxil ol</button>
+  
+        </form>
+        <a href="#" class="forgot-link">Hesabı unutmusunuz?</a>
+        <div class="divider">və ya</div>
+        <button class="new-account-btn">
+          <a href="./assets/pages/register.html">Yeni hesab yarat</a>
+        </button>
+      </div>
     </div>
-</section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="/main.js"></script>
-</body>
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>
